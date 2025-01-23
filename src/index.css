@@ -1,12 +1,23 @@
 @import "tailwindcss";
 @font-face {
     font-family:"emporia" ;
-    src: url("../public/font/emporia-roman.otf");
+    src: url("/font/emporia-roman.otf");
 }
 @layer base {
     body{
         font-family: "emporia";
         background-color: #1b1b1b;
         color: white;
+    }
+}
+
+@layer components{
+    .shape{
+        background: linear-gradient(
+            rgba(238,0,0,1)0%,
+            rgba(238,163,0,1)75%,
+            rgba(252,252,252,1)100%
+            );
+         border-radius: 25rem 25rem 0 0;
     }
 }
