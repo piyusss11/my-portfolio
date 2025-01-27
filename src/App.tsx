@@ -25,8 +25,8 @@ function App() {
       <div className="wrapper">
         <Hero />
         <About />
-        <Contact/>
         <Projects/>
+        <Contact/>
       </div>
     </>
   );
