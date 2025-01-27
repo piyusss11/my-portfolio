@@ -2,7 +2,7 @@
 
 const Projects = () => {
   return (
-  <section className='h-screen snap-start'>hey</section>
+  <section className='panel h-screen snap-start'>hey</section>
   )
 }
 

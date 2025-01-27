@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="h-screen relative snap-start">
+    <section className="panel h-screen relative snap-start">
       <div className="shape absolute w-full h-[50vh] rotate-180 left-0 right-0"></div>
       <div className="h-full w-full backdrop-blur-3xl flex flex-col justify-center p-40">
         <h1 className="text-8xl p-20">About</h1>

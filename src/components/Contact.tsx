@@ -1,10 +1,9 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaHashnode } from "react-icons/fa6";
+import { GithubIcon, HashnodeIcon, LinkedinIcon, TwitterIcon } from "./Icons";
 
 const Contact = () => {
   return (
     <section
-      className="h-screen snap-start flex flex-col justify-between items-center relative px-8 py-16"
+      className="panel h-screen snap-start flex flex-col justify-between items-center relative px-8 py-16"
       id="contact"
     >
       <div className="shapeCircle absolute w-40 h-40 top-55 right-[44%]"></div>
@@ -33,9 +32,10 @@ const Contact = () => {
         <div className="space-y-2 text-center md:text-left">
           <p className="opacity-60">Social Media</p>
           <div className="flex justify-center gap-8 mt-5">
-            <FaGithub className="hover:text-orange-500 hover:scale-125 duration-300 cursor-pointer" />
-            <FaLinkedin className="hover:text-orange-500 hover:scale-125 duration-300 cursor-pointer" />
-            <FaHashnode className="hover:text-orange-500 hover:scale-125 duration-300 cursor-pointer" />
+            <GithubIcon />
+            <TwitterIcon />
+            <LinkedinIcon />
+            <HashnodeIcon />
           </div>
         </div>
       </div>
