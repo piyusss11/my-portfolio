@@ -1,4 +1,5 @@
-import { GithubIcon, HashnodeIcon, LinkedinIcon, TwitterIcon } from "./Icons";
+import { GithubIcon , HashnodeIcon, LinkedinIcon, TwitterIcon} from "../components/Icons";
+
 
 const Contact = () => {
   return (
@@ -32,7 +33,7 @@ const Contact = () => {
         <div className="space-y-2 text-center md:text-left">
           <p className="opacity-60">Social Media</p>
           <div className="flex justify-center gap-8 mt-5">
-            <GithubIcon />
+            <GithubIcon/>
             <TwitterIcon />
             <LinkedinIcon />
             <HashnodeIcon />
