@@ -28,6 +28,7 @@ function App() {
         },
       });
     });
+    
     const setDotActive = (index: number) => {
       const dot = document.querySelector(`.bullet-${index + 1}`);
       if (dot) {
@@ -44,8 +45,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="fixed bottom-0 z-1 w-24 h-[70vh] flex flex-col justify-between items-center p-10">
-        <div className="flex items-center -rotate-90 gap-8">
+      <div className="navbar2 fixed bottom-0 z-1 w-24 h-[70vh] flex flex-col justify-between items-center p-10">
+        <div className="flex items-center -rotate-90 gap-8 duration-300 p-4">
           <p>hello</p>
           <div className="w-20 h-[1px] bg-white/50"></div>
           <p>World</p>
@@ -56,7 +57,7 @@ function App() {
           <HashnodeIcon />
         </div>
       </div>
-      <div className="fixed top-1/2 right-10 z-1 space-y-3">
+      <div className="bullets fixed top-1/2 right-10 z-1 space-y-3">
         <div className="bg-white/25 size-2 rounded-full bullet-1 duration-300"></div>
         <div className="bg-white/25 size-2 rounded-full bullet-2 duration-300"></div>
         <div className="bg-white/25 size-2 rounded-full bullet-3 duration-300"></div>
