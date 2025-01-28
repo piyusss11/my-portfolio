@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { CiVideoOn } from "react-icons/ci";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaVideo } from "react-icons/fa";
 import { FaHashnode, FaLink } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 interface IconProps {
@@ -50,7 +49,7 @@ export const TwitterIcon: FC<IconProps> = ({ className }) => {
 export const VideoIcon: FC<IconProps> = ({ className, link }) => {
   return (
     <a href={link} target="_blank">
-      <CiVideoOn
+      <FaVideo
         className={`hover:text-orange-500 hover:scale-125 duration-300 cursor-pointer ${className}`}
       />
     </a>

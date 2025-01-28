@@ -4,15 +4,18 @@ const About = () => {
       <div className="shape absolute w-full h-[50vh] rotate-180 left-0 right-0"></div>
       <div className="h-full w-full backdrop-blur-3xl flex flex-col justify-center p-40">
         <h1 className="text-8xl p-20">About</h1>
-        <div className="w-96 self-center flex flex-col gap-6 opacity-50 font-sans ">
+        <div className="w-1/2 self-center flex flex-col gap-6 opacity-100 font-sans ">
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit et
-            praesentium minima, dolores omnis in!
+            Dynamic and detail-oriented Product Developer skilled in designing,
+            developing, and maintaining responsive websites and web
+            applications. Proficient in front-end and back-end technologies,
+            with expertise in web3, I excel at turning complex problems into
+            elegant solutions for seamless user experiences.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
-            veniam odit aliquam saepe distinctio ratione ea optio laboriosam,
-            culpa deleniti harum, officia nostrum asperiores repudiandae!
+            With a strong emphasis on user experience and interface design, I
+            create engaging digital products—because life’s too short for clunky
+            interfaces and slow loading times!
           </p>
         </div>
         <div className="px-10 py-20">
