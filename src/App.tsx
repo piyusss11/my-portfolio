@@ -45,8 +45,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="navbar2 fixed bottom-0 z-1 w-24 h-[70vh] flex flex-col justify-between items-center p-10">
-        <div className="flex items-center -rotate-90 gap-8 duration-300 p-4">
+      <div className="navbar2 fixed bottom-0 z-50 w-16 md:w-24 h-[70vh] flex flex-col justify-between items-center  py-10 md:p-10">
+        <div className="invisible md:flex  items-center -rotate-90 gap-8 duration-300 p-4">
           <p>hello</p>
           <div className="w-20 h-[1px] bg-white/50"></div>
           <p>World</p>
@@ -57,11 +57,11 @@ function App() {
           <HashnodeIcon />
         </div>
       </div>
-      <div className="bullets fixed top-1/2 right-10 z-1 space-y-3">
-        <div className="bg-white/25 size-2 rounded-full bullet-1 duration-300"></div>
-        <div className="bg-white/25 size-2 rounded-full bullet-2 duration-300"></div>
-        <div className="bg-white/25 size-2 rounded-full bullet-3 duration-300"></div>
-        <div className="bg-white/25 size-2 rounded-full bullet-4 duration-300"></div>
+      <div className="bullets fixed top-1/2 right-5 md:right-10 z-50 space-y-3">
+        <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-1 duration-300"></div>
+        <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-2 duration-300"></div>
+        <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-3 duration-300"></div>
+        <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-4 duration-300"></div>
       </div>
       <div className="wrapper">
         <Hero />
