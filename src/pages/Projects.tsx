@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { MoreProjectsIcon } from "../components/Icons";
 import ProjectBox from "../components/ProjectBox";
 import { projectsInfo } from "../utils/projectsInfo";
@@ -7,8 +7,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Projects = () => {
-  gsap.registerPlugin(ScrollTrigger);
   const container = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  }, []);
   useGSAP(() => {
     gsap.utils
       .toArray(["#project-1", "#project-2", "#project-3", "#project-4"])
@@ -21,7 +23,7 @@ const Projects = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: container.current,
-            start: "top 70%", // Triggers when section reaches middle
+            start: "top 70%", 
             end: "top 40%",
             toggleActions: "play reverse play reverse",
             onEnter: () => {
@@ -32,7 +34,7 @@ const Projects = () => {
               gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
             },
             onLeaveBack: () => {
-              gsap.set(el, { x: -200, opacity: 0 }); // Reset when scrolling up
+              gsap.set(el, { x: -200, opacity: 0 }); 
             },
           },
         });
@@ -48,7 +50,7 @@ const Projects = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: container.current,
-            start: "top 70%", // Triggers when section reaches middle
+            start: "top 70%", 
             end: "top 40%",
             toggleActions: "play reverse play reverse",
             onEnter: () => {

@@ -11,7 +11,7 @@ const ProjectBox: FC<Project> = ({
   liveLink,
   videoLink,
 }) => {
-  console.log(id);
+
 
   return (
     <div
