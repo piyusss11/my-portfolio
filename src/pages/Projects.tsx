@@ -10,54 +10,56 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
   const container = useRef<HTMLDivElement | null>(null);
   useGSAP(() => {
-    gsap.utils.toArray(["#project-1", "#project-2", "#project-3", "#project-4"]).forEach((el:any) => {
-      gsap.from(el, {
-        x: -200,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 70%", // Triggers when section reaches middle
-          end: "top 40%",
-          toggleActions: "play reverse play reverse",
-          onEnter: () => {
-            gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
+    gsap.utils
+      .toArray(["#project-1", "#project-2", "#project-3", "#project-4"])
+      .forEach((el: any) => {
+        gsap.from(el, {
+          x: -200,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top 70%", // Triggers when section reaches middle
+            end: "top 40%",
+            toggleActions: "play reverse play reverse",
+            onEnter: () => {
+              gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
+            },
+            onLeave: () => {},
+            onEnterBack: () => {
+              gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
+            },
+            onLeaveBack: () => {
+              gsap.set(el, { x: -200, opacity: 0 }); // Reset when scrolling up
+            },
           },
-          onLeave: () => {
-            
-          },
-          onEnterBack: () => {
-            gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
-          },
-          onLeaveBack: () => {
-            gsap.set(el, { x: -200, opacity: 0 }); // Reset when scrolling up
-          },
-        },
+        });
       });
-    });
-    gsap.utils.toArray(["#project-5", "#project-6", "#project-7", "#project-8"]).forEach((el:any) => {
-      gsap.from(el, {
-        x: 200,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 70%", // Triggers when section reaches middle
-          end: "top 40%",
-          toggleActions: "play reverse play reverse",
-          onEnter: () => {
-            gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
+    gsap.utils
+      .toArray(["#project-5", "#project-6", "#project-7", "#project-8"])
+      .forEach((el: any) => {
+        gsap.from(el, {
+          x: 200,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top 70%", // Triggers when section reaches middle
+            end: "top 40%",
+            toggleActions: "play reverse play reverse",
+            onEnter: () => {
+              gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
+            },
+            onEnterBack: () => {
+              gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
+            },
           },
-          onEnterBack: () => {
-            gsap.to(el, { x: 0, opacity: 1, duration: 0.6 });
-          },
-        },
+        });
       });
-    });
   });
   return (
     <section ref={container} className="panel h-screen snap-start relative">
@@ -65,7 +67,7 @@ const Projects = () => {
       <div className="backdrop-blur-3xl flex flex-col items-center md:block px-14 md:px-30 py-16 h-full w-full">
         <div className="md:flex md:justify-between md:items-center space-y-6 md:space-y-0 mt-4 ">
           <h1 className="text-3xl md:text-6xl">My Work</h1>
-          <a 
+          <a
             target="_blank"
             href="https://docs.google.com/spreadsheets/d/1LVBCuGuXQgOYJhftaqfEfnaNVioPh6XusDYHq6M9jWM/edit?usp=sharing"
           >
@@ -76,15 +78,17 @@ const Projects = () => {
         </div>
         <div className="w-full mt-14 md:mt-0 pb-10 h-full overflow-y-scroll md:gap-10 md:flex md:flex-wrap items-center justify-center">
           {projectsInfo.map((project) => (
-            <ProjectBox
-              id={project.id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              githubLink={project.githubLink}
-              liveLink={project.liveLink}
-              videoLink={project.videoLink}
-            />
+            <div key={project.id}>
+              <ProjectBox
+                id={project.id}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                githubLink={project.githubLink}
+                liveLink={project.liveLink}
+                videoLink={project.videoLink}
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -16,7 +16,7 @@ const ProjectBox: FC<Project> = ({
   return (
     <div
       id={`project-${id}`}
-      key={id}
+      
       style={{ backgroundImage: `url(${image})` }}
       className={`card bg-transparent bg-center bg-contain bg-no-repeat w-[280px] h-[240px] relative overflow-hidden group rounded-lg`}
     >
