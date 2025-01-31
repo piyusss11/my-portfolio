@@ -18,21 +18,21 @@ const Contact = () => {
           Let's mix our skills with your ideas and create something beautiful.
         </p>
 
-        <button className="glass-btn size-42 mt-8 rounded-full text-lg cursor-pointer">
+        <button className="glass-btn size-42 mt-8 rounded-full text-lg md:text-xl cursor-pointer">
           Start a Project
         </button>
-        <div className="md:flex md:justify-between  gap-4 w-full max-w-4xl space-x-8">
-          <div className="space-y-2 text-center md:text-left">
+        <div className="md:flex md:justify-between md:text-lg  gap-4 w-full max-w-4xl">
+          <div className="space-y-1 text-center md:text-left">
             <p className="opacity-60">Phone Number</p>
             <p>8077636022</p>
           </div>
 
-          <div className="space-y-2 text-center md:text-left">
+          <div className="space-y-1 text-center md:text-left">
             <p className="opacity-60">Email</p>
             <p>piyusss11@gmail.com</p>
           </div>
 
-          <div className="space-y-2 text-center md:text-left">
+          <div className="space-y-1 text-center md:text-left">
             <p className="opacity-60">Social Media</p>
             <div className="flex justify-center gap-8 mt-5">
               <GithubIcon />

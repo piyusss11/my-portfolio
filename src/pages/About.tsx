@@ -7,7 +7,7 @@ const About = () => {
           About
         </h1>
 
-        <div className="w-full md:w-3/4 lg:w-1/2 self-center flex flex-col gap-4 md:gap-6 text-center md:text-left">
+        <div className="w-full md:w-3/4 lg:w-1/2 self-center flex flex-col gap-4 md:gap-6 text-center md:text-lg md:text-left">
           <p>
             Dynamic and detail-oriented Product Developer skilled in designing,
             developing, and maintaining responsive websites and web
