@@ -11,7 +11,8 @@ const Navbar = () => {
     });
     gsap.from(".shape,.navbar2", {
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
+      delay: 1,
       x: -100,
     });
     gsap.from(".bullets", {
@@ -23,9 +24,9 @@ const Navbar = () => {
       opacity: 0,
       duration: 1,
       display: "none",
-      x:100,
+      x: 100,
       ease: "power1",
-    })
+    });
   }, []);
   return (
     <nav className="navbar1 fixed w-full p-8 z-50 flex items-center justify-between">
