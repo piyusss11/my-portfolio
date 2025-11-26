@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 import About from "./pages/About";
+import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import { useGSAP } from "@gsap/react";
@@ -20,15 +21,15 @@ function App() {
         background: "#fff",
         scrollTrigger: {
           trigger: panel,
-          start:"top center",
-          end:"bottom center",
+          start: "top center",
+          end: "bottom center",
           toggleActions: "play reverse play reverse",
           onEnter: () => setDotActive(i),
           onLeave: () => setDotInactive(i),
         },
       });
     });
-    
+
     const setDotActive = (index: number) => {
       const dot = document.querySelector(`.bullet-${index + 1}`);
       if (dot) {
@@ -62,10 +63,12 @@ function App() {
         <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-2 duration-300"></div>
         <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-3 duration-300"></div>
         <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-4 duration-300"></div>
+        <div className="bg-white/25 size-1 md:size-2 rounded-full bullet-5 duration-300"></div>
       </div>
       <div className="wrapper">
         <Hero />
         <About />
+        <Experience />
         <Projects />
         <Contact />
       </div>
